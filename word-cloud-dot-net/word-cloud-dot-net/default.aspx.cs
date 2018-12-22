@@ -21,15 +21,11 @@ namespace word_cloud_dot_net
 
         private void chk_type()
         {
-            if(DropDownList1.SelectedItem.Value.Equals("0"))
-            {
+            if(DropDownList1.SelectedItem.Value.Equals("0")) {
                 Panel2.Visible = true;
-            }
-            else
-            {
+            } else {
                 Panel1.Visible = true;
             }
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -68,8 +64,8 @@ namespace word_cloud_dot_net
                 string WordString = wm.RemoveSpecialSymbole(TextPart);
                 DataTable dt = new DataTable();
                 dt = wm.checkcount(WordString);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                //GridView1.DataSource = dt;
+                //GridView1.DataBind();
                 WordList = wm.setValue(dt);
             }
         }
